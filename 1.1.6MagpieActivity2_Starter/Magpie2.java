@@ -33,11 +33,23 @@ public class Magpie2
 		String response = "";
 		if (statement.trim().length() == 0)
 		{
-			response = "Say something, please."
+			response = "Say something, please.";
 		}
 		else if (statement.indexOf("no") >= 0)
 		{
 			response = "Why so negative?";
+		}
+		else if (statement.indexOf("animal") >= 0)
+		{
+			response = "What's your favorite animal?";
+		}
+		else if (statement.indexOf("color") >= 0)
+		{
+			response = "What's your favorite color?";
+		}
+		else if (statement.indexOf("food") >= 0)
+		{
+			response = "What's your favorite food?";
 		}
 		else if (statement.indexOf("mother") >= 0
 				|| statement.indexOf("father") >= 0
@@ -54,7 +66,7 @@ public class Magpie2
 				|| statement.indexOf("Mrs.")>= 0
 				|| statement.indexOf("Ms.") >= 0)
 		{
-			response = "They sound like a good teacher."
+			response = "They sound like a good teacher.";
 		}
 		else
 		{
@@ -90,7 +102,15 @@ public class Magpie2
 		{
 			response = "You don't say.";
 		}
-
+		else if (whichResponse == 4)
+		{
+			response = "Seems reasonable.";
+		}
+		else if (whichResponse == 5)
+		{
+			response = "Sounds good.";
+		}
+		
 		return response;
 	}
 }
